@@ -2,4 +2,4 @@
 
 Make a single screen iOS app which shows current delhi weather.
 
-<img src="readme_assets/home_screen.png" height="720"/>
+<img src="screenshots/home_screen.png" height="720"/>
