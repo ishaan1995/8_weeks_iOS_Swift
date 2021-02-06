@@ -56,12 +56,12 @@
 		0D5ACBDD25CED3D1000D2D7A /* HelloWorld */ = {
 			isa = PBXGroup;
 			children = (
-				0D5ACBDE25CED3D1000D2D7A /* AppDelegate.swift */,
 				0D5ACBE025CED3D1000D2D7A /* SceneDelegate.swift */,
 				0D5ACBE225CED3D1000D2D7A /* ViewController.swift */,
-				0D5ACBE425CED3D1000D2D7A /* Main.storyboard */,
+				0D5ACBDE25CED3D1000D2D7A /* AppDelegate.swift */,
 				0D5ACBE725CED3D5000D2D7A /* Assets.xcassets */,
 				0D5ACBE925CED3D5000D2D7A /* LaunchScreen.storyboard */,
+				0D5ACBE425CED3D1000D2D7A /* Main.storyboard */,
 				0D5ACBEC25CED3D5000D2D7A /* Info.plist */,
 			);
 			path = HelloWorld;

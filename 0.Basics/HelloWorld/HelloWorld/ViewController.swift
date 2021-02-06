@@ -9,6 +9,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBAction func refreshBtnClicked(_ sender: UIButton) {
+        sender.setTitle("Coming Soon", for: .normal)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
