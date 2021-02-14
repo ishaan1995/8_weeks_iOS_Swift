@@ -13,9 +13,12 @@ class ViewController: UIViewController {
         fetchWeather()
     }
     
+    @IBOutlet weak var currentTempView: UILabel!
+    
+    @IBOutlet weak var placeView: UILabel!
     
     
-    
+    @IBOutlet weak var minMaxTempView: UILabel!
     
     
     override func viewDidLoad() {
@@ -36,10 +39,8 @@ class ViewController: UIViewController {
             
             do {
                 let weatherResponse = try JSONDecoder().decode(MetaWeatherResponse.self, from: data!)
-                print("Place: \(weatherResponse.title), Country: \(weatherResponse.parent.title)")
-                print(Int(weatherResponse.consolidatedWeather[0].minTemp))
-                print(Int(weatherResponse.consolidatedWeather[0].maxTemp.rounded()))
-                print(Int(weatherResponse.consolidatedWeather[0].theTemp.rounded()))
+                let latestWeather = weatherResponse.consolidatedWeather[0]
+                self.updatedWeatherViews(city: weatherResponse.title, country: weatherResponse.parent.title, temp: Int(latestWeather.theTemp.rounded()), minTemp: Int(latestWeather.minTemp.rounded()), maxTemp: Int(latestWeather.maxTemp.rounded()))
             } catch {
                 print("Error during JSON serialization: \(error.localizedDescription)")
                 self.showErrorAlert(title: "Oops!", message: "Invalid response. Please try again")
@@ -54,6 +55,15 @@ class ViewController: UIViewController {
             let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
             alert.addAction(action)
             self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func updatedWeatherViews(city: String, country: String, temp: Int,
+                           minTemp: Int, maxTemp: Int) {
+        DispatchQueue.main.async {
+            self.placeView.text = "🏠 \(city), \(country)"
+            self.currentTempView.text = "⛅️ \(temp)°C"
+            self.minMaxTempView.text = "Min: \(minTemp)°C | Max: \(maxTemp)°C"
         }
     }
 }

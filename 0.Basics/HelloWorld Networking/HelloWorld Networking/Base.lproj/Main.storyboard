@@ -31,8 +31,8 @@
                                     <action selector="refreshBtnClicked:" destination="2l8-lP-SM9" eventType="touchUpInside" id="Krv-yp-EmS"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⛅️ 21°C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNl-X8-SED">
-                                <rect key="frame" x="110" y="290.5" width="194" height="57.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⛅️ 21°C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNl-X8-SED">
+                                <rect key="frame" x="50" y="290.5" width="314" height="57.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -53,23 +53,26 @@
                         <viewLayoutGuide key="safeArea" id="7QV-iO-puH"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
-                            <constraint firstItem="BNl-X8-SED" firstAttribute="leading" secondItem="7QV-iO-puH" secondAttribute="leading" constant="110" id="0UW-fW-sFH"/>
+                            <constraint firstItem="BNl-X8-SED" firstAttribute="leading" secondItem="7QV-iO-puH" secondAttribute="leading" constant="50" id="0UW-fW-sFH"/>
                             <constraint firstItem="JKH-fM-vEA" firstAttribute="centerY" secondItem="yeC-FP-STb" secondAttribute="centerY" id="2Mi-yy-5nH"/>
                             <constraint firstItem="AXF-71-3Pr" firstAttribute="top" secondItem="BNl-X8-SED" secondAttribute="bottom" constant="16" id="5V2-xV-QS4"/>
                             <constraint firstItem="BNl-X8-SED" firstAttribute="top" secondItem="PsJ-hd-MMs" secondAttribute="bottom" constant="16" id="9zZ-gW-abK"/>
                             <constraint firstItem="AXF-71-3Pr" firstAttribute="centerX" secondItem="yeC-FP-STb" secondAttribute="centerX" id="HUg-bf-kKe"/>
                             <constraint firstItem="JKH-fM-vEA" firstAttribute="top" secondItem="BNl-X8-SED" secondAttribute="bottom" constant="80" id="IpW-2K-vXX"/>
-                            <constraint firstItem="7QV-iO-puH" firstAttribute="trailing" secondItem="BNl-X8-SED" secondAttribute="trailing" constant="110" id="Mht-Fm-QWW"/>
+                            <constraint firstItem="7QV-iO-puH" firstAttribute="trailing" secondItem="BNl-X8-SED" secondAttribute="trailing" constant="50" id="Mht-Fm-QWW"/>
                             <constraint firstItem="AXF-71-3Pr" firstAttribute="top" secondItem="BNl-X8-SED" secondAttribute="bottom" constant="16" id="Mt3-aL-qZV"/>
-                            <constraint firstItem="BNl-X8-SED" firstAttribute="leading" secondItem="7QV-iO-puH" secondAttribute="leading" constant="110" id="Pa2-2n-2wr"/>
                             <constraint firstItem="JKH-fM-vEA" firstAttribute="top" secondItem="AXF-71-3Pr" secondAttribute="bottom" constant="44" id="ZgX-pC-KSg"/>
                             <constraint firstItem="PsJ-hd-MMs" firstAttribute="centerX" secondItem="yeC-FP-STb" secondAttribute="centerX" id="hwR-tl-dY8"/>
                             <constraint firstItem="BNl-X8-SED" firstAttribute="centerX" secondItem="yeC-FP-STb" secondAttribute="centerX" id="ip1-ZZ-0zK"/>
                             <constraint firstItem="JKH-fM-vEA" firstAttribute="centerX" secondItem="yeC-FP-STb" secondAttribute="centerX" id="nav-kR-wjx"/>
                             <constraint firstItem="BNl-X8-SED" firstAttribute="top" secondItem="PsJ-hd-MMs" secondAttribute="bottom" constant="16" id="vNZ-Nm-GT3"/>
-                            <constraint firstItem="7QV-iO-puH" firstAttribute="trailing" secondItem="BNl-X8-SED" secondAttribute="trailing" constant="110" id="vvF-Lm-lxm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currentTempView" destination="BNl-X8-SED" id="HPX-X1-Q3V"/>
+                        <outlet property="minMaxTempView" destination="AXF-71-3Pr" id="52W-fb-kCN"/>
+                        <outlet property="placeView" destination="PsJ-hd-MMs" id="fbg-Mw-mXB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vu6-O1-vdb" sceneMemberID="firstResponder"/>
             </objects>
