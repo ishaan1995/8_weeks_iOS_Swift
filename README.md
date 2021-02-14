@@ -20,7 +20,9 @@ https://podcasts.apple.com/us/podcast/developing-ios-11-apps-with-swift/id131513
 │   │   └── screenshots
 │   └── HelloWorld\ Networking
 │       ├── HelloWorld\ Networking
-│       └── HelloWorld\ Networking.xcodeproj
+│       ├── HelloWorld\ Networking.xcodeproj
+│       ├── README.md
+│       └── screenshots
 ├── LICENSE
 └── README.md
 ```
