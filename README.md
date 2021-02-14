@@ -7,3 +7,20 @@ Series of small simple projects to learn swift, basics of layouting, networking 
 
 ### Standford course on building iOS apps using Swift 4 
 https://podcasts.apple.com/us/podcast/developing-ios-11-apps-with-swift/id1315130780
+
+# Directory Structure
+
+```
+.
+├── 0.Basics
+│   ├── HelloWorld
+│   │   ├── HelloWorld
+│   │   ├── HelloWorld.xcodeproj
+│   │   ├── README.md
+│   │   └── screenshots
+│   └── HelloWorld\ Networking
+│       ├── HelloWorld\ Networking
+│       └── HelloWorld\ Networking.xcodeproj
+├── LICENSE
+└── README.md
+```
