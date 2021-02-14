@@ -10,10 +10,10 @@
 		0D60096225D94E5D004E7FDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D60096125D94E5D004E7FDD /* AppDelegate.swift */; };
 		0D60096425D94E5D004E7FDD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D60096325D94E5D004E7FDD /* SceneDelegate.swift */; };
 		0D60096625D94E5D004E7FDD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D60096525D94E5D004E7FDD /* ViewController.swift */; };
-		0D60096925D94E5D004E7FDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D60096725D94E5D004E7FDD /* Main.storyboard */; };
 		0D60096B25D94E62004E7FDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D60096A25D94E62004E7FDD /* Assets.xcassets */; };
 		0D60096E25D94E62004E7FDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D60096C25D94E62004E7FDD /* LaunchScreen.storyboard */; };
 		0D60097825D9B1D1004E7FDD /* MetaWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D60097725D9B1D1004E7FDD /* MetaWeatherData.swift */; };
+		0DE7254025D9BC3D00713281 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D60096725D94E5D004E7FDD /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -127,9 +127,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DE7254025D9BC3D00713281 /* Main.storyboard in Resources */,
 				0D60096E25D94E62004E7FDD /* LaunchScreen.storyboard in Resources */,
 				0D60096B25D94E62004E7FDD /* Assets.xcassets in Resources */,
-				0D60096925D94E5D004E7FDD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

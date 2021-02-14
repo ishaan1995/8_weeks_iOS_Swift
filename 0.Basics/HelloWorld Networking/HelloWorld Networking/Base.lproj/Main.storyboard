@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="1Wf-h8-BTn">
             <objects>
-                <viewController id="2l8-lP-SM9" customClass="ViewController" customModule="HelloWorld_Networking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2l8-lP-SM9" customClass="ViewController" customModule="HelloWorld_Networking" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yeC-FP-STb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,8 +37,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🏠 New Delhi, IN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PsJ-hd-MMs">
-                                <rect key="frame" x="144.5" y="254.5" width="125" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🏠 New Delhi, India" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PsJ-hd-MMs">
+                                <rect key="frame" x="135" y="254.5" width="144" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -49,15 +49,21 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="SVw-xS-NBw">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                                <color key="color" systemColor="systemGreenColor"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7QV-iO-puH"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
                             <constraint firstItem="BNl-X8-SED" firstAttribute="leading" secondItem="7QV-iO-puH" secondAttribute="leading" constant="50" id="0UW-fW-sFH"/>
                             <constraint firstItem="JKH-fM-vEA" firstAttribute="centerY" secondItem="yeC-FP-STb" secondAttribute="centerY" id="2Mi-yy-5nH"/>
+                            <constraint firstItem="SVw-xS-NBw" firstAttribute="centerX" secondItem="yeC-FP-STb" secondAttribute="centerX" id="2ko-t7-nFO"/>
                             <constraint firstItem="AXF-71-3Pr" firstAttribute="top" secondItem="BNl-X8-SED" secondAttribute="bottom" constant="16" id="5V2-xV-QS4"/>
                             <constraint firstItem="BNl-X8-SED" firstAttribute="top" secondItem="PsJ-hd-MMs" secondAttribute="bottom" constant="16" id="9zZ-gW-abK"/>
                             <constraint firstItem="AXF-71-3Pr" firstAttribute="centerX" secondItem="yeC-FP-STb" secondAttribute="centerX" id="HUg-bf-kKe"/>
+                            <constraint firstItem="SVw-xS-NBw" firstAttribute="centerY" secondItem="yeC-FP-STb" secondAttribute="centerY" id="I3X-E7-coO"/>
                             <constraint firstItem="JKH-fM-vEA" firstAttribute="top" secondItem="BNl-X8-SED" secondAttribute="bottom" constant="80" id="IpW-2K-vXX"/>
                             <constraint firstItem="7QV-iO-puH" firstAttribute="trailing" secondItem="BNl-X8-SED" secondAttribute="trailing" constant="50" id="Mht-Fm-QWW"/>
                             <constraint firstItem="AXF-71-3Pr" firstAttribute="top" secondItem="BNl-X8-SED" secondAttribute="bottom" constant="16" id="Mt3-aL-qZV"/>
@@ -70,8 +76,10 @@
                     </view>
                     <connections>
                         <outlet property="currentTempView" destination="BNl-X8-SED" id="HPX-X1-Q3V"/>
+                        <outlet property="loadingView" destination="SVw-xS-NBw" id="QUJ-iO-kh7"/>
                         <outlet property="minMaxTempView" destination="AXF-71-3Pr" id="52W-fb-kCN"/>
                         <outlet property="placeView" destination="PsJ-hd-MMs" id="fbg-Mw-mXB"/>
+                        <outlet property="refreshBtnView" destination="JKH-fM-vEA" id="6Mr-9R-Kah"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vu6-O1-vdb" sceneMemberID="firstResponder"/>

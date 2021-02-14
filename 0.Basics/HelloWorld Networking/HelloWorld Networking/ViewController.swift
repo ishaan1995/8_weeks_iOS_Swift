@@ -17,16 +17,20 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var placeView: UILabel!
     
-    
     @IBOutlet weak var minMaxTempView: UILabel!
+
+    @IBOutlet weak var refreshBtnView: UIButton!
     
+    @IBOutlet weak var loadingView: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        fetchWeather()
     }
     
     func fetchWeather() {
+        updateUI(showLoading: true)
         let session = URLSession.shared
         let url = URL(string: "https://www.metaweather.com/api/location/28743736")!
         
@@ -55,6 +59,7 @@ class ViewController: UIViewController {
             let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
             alert.addAction(action)
             self.present(alert, animated: true, completion: nil)
+            self.updateUI(showLoading: false)
         }
     }
     
@@ -64,6 +69,22 @@ class ViewController: UIViewController {
             self.placeView.text = "🏠 \(city), \(country)"
             self.currentTempView.text = "⛅️ \(temp)°C"
             self.minMaxTempView.text = "Min: \(minTemp)°C | Max: \(maxTemp)°C"
+            self.updateUI(showLoading: false)
+        }
+    }
+    
+    func updateUI(showLoading: Bool) {
+        minMaxTempView.isHidden = showLoading
+        placeView.isHidden = showLoading
+        currentTempView.isHidden = showLoading
+        refreshBtnView.isHidden = showLoading
+        
+        if (showLoading) {
+            loadingView.isHidden = false
+            loadingView.startAnimating()
+        } else {
+            loadingView.stopAnimating()
+            loadingView.isHidden = true
         }
     }
 }
